@@ -34,9 +34,6 @@ const Header = () => {
             <a href="#" className="text-gray-700 hover:text-rose-600 transition-colors duration-300 font-medium">
               Brands
             </a>
-            <a href="#" className="text-gray-700 hover:text-rose-600 transition-colors duration-300 font-medium">
-              AI Consultant
-            </a>
           </nav>
 
           {/* Actions */}
@@ -94,9 +91,6 @@ const Header = () => {
               </a>
               <a href="#" className="text-gray-700 hover:text-rose-600 transition-colors duration-300 font-medium px-2">
                 Brands
-              </a>
-              <a href="#" className="text-gray-700 hover:text-rose-600 transition-colors duration-300 font-medium px-2">
-                AI Consultant
               </a>
               <div className="flex items-center gap-4 px-2 pt-2 border-t border-gray-200">
                 <Button variant="ghost" size="sm" className="text-gray-600 hover:text-rose-600">
