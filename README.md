@@ -4,6 +4,9 @@
 
 **URL**: https://lovable.dev/projects/c9954e53-aadb-4019-bde2-11dff6d2ecb7
 
+## Take a Look
+**URL** = https://chic-chat-catalog.lovable.app
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
