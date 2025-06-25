@@ -9,11 +9,11 @@ const products = [
     id: 1,
     name: "Radiant Glow Serum",
     brand: "LuxeBeauty",
-    price: 89.99,
-    originalPrice: 119.99,
+    price: 2499,
+    originalPrice: 3299,
     rating: 4.8,
     reviews: 1250,
-    image: "bg-gradient-to-br from-pink-200 to-rose-300",
+    image: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=400&h=400&fit=crop&crop=center",
     category: "Skincare",
     bestseller: true
   },
@@ -21,11 +21,11 @@ const products = [
     id: 2,
     name: "Velvet Matte Lipstick",
     brand: "ColorCraft",
-    price: 24.99,
-    originalPrice: 34.99,
+    price: 699,
+    originalPrice: 999,
     rating: 4.9,
     reviews: 890,
-    image: "bg-gradient-to-br from-red-300 to-pink-400",
+    image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=400&fit=crop&crop=center",
     category: "Makeup",
     bestseller: false
   },
@@ -33,11 +33,11 @@ const products = [
     id: 3,
     name: "Hydrating Face Mask",
     brand: "GlowEssentials",
-    price: 45.99,
+    price: 1299,
     originalPrice: null,
     rating: 4.7,
     reviews: 2100,
-    image: "bg-gradient-to-br from-blue-200 to-cyan-300",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=center",
     category: "Skincare",
     bestseller: true
   },
@@ -45,11 +45,11 @@ const products = [
     id: 4,
     name: "Long-Wear Foundation",
     brand: "FlawlessFinish",
-    price: 52.99,
-    originalPrice: 69.99,
+    price: 1499,
+    originalPrice: 1999,
     rating: 4.6,
     reviews: 756,
-    image: "bg-gradient-to-br from-amber-200 to-orange-300",
+    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop&crop=center",
     category: "Makeup",
     bestseller: false
   },
@@ -57,11 +57,11 @@ const products = [
     id: 5,
     name: "Vitamin C Brightening Cream",
     brand: "PureGlow",
-    price: 67.99,
-    originalPrice: 89.99,
+    price: 1899,
+    originalPrice: 2499,
     rating: 4.8,
     reviews: 1890,
-    image: "bg-gradient-to-br from-yellow-200 to-orange-300",
+    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop&crop=center",
     category: "Skincare",
     bestseller: true
   },
@@ -69,11 +69,11 @@ const products = [
     id: 6,
     name: "Eyeshadow Palette - Sunset",
     brand: "ChromaColors",
-    price: 38.99,
-    originalPrice: 49.99,
+    price: 1099,
+    originalPrice: 1399,
     rating: 4.9,
     reviews: 1456,
-    image: "bg-gradient-to-br from-orange-300 to-red-400",
+    image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=400&fit=crop&crop=center",
     category: "Makeup",
     bestseller: false
   }
@@ -111,7 +111,12 @@ const FeaturedProducts = () => {
             >
               <CardContent className="p-0">
                 {/* Product Image */}
-                <div className={`relative h-64 ${product.image} flex items-center justify-center overflow-hidden`}>
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                   {product.bestseller && (
                     <div className="absolute top-4 left-4 bg-rose-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       Bestseller
@@ -132,7 +137,6 @@ const FeaturedProducts = () => {
                       }`}
                     />
                   </button>
-                  <div className="w-24 h-24 bg-white/30 rounded-2xl backdrop-blur-sm group-hover:scale-110 transition-transform duration-300"></div>
                 </div>
 
                 {/* Product Info */}
@@ -164,11 +168,11 @@ const FeaturedProducts = () => {
                   {/* Price */}
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-2xl font-bold text-gray-900">
-                      ${product.price}
+                      ₹{product.price.toLocaleString()}
                     </span>
                     {product.originalPrice && (
                       <span className="text-lg text-gray-500 line-through">
-                        ${product.originalPrice}
+                        ₹{product.originalPrice.toLocaleString()}
                       </span>
                     )}
                   </div>
