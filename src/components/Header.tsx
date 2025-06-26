@@ -8,7 +8,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Search, ShoppingBag, User, Menu, X, Heart, ChevronDown } from "lucide-react";
+import { Search, ShoppingBag, User, Menu, X, Heart, ChevronDown, Droplet, Palette, Sun } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,6 +29,13 @@ const Header = () => {
     { name: "Faces Canada", website: "https://www.facescanada.com/" },
     { name: "Sugar Cosmetics", website: "https://www.sugarcosmetics.com/" },
     { name: "MyGlamm", website: "https://www.myglamm.com/" },
+  ];
+
+  const categories = [
+    { name: "Skincare", description: "Glow from within", icon: Droplet, products: "200+ products" },
+    { name: "Makeup", description: "Express yourself", icon: Palette, products: "300+ products" },
+    { name: "Fragrance", description: "Signature scents", icon: Heart, products: "150+ products" },
+    { name: "Sun Care", description: "Protect & perfect", icon: Sun, products: "80+ products" }
   ];
 
   return (
@@ -53,9 +60,32 @@ const Header = () => {
             <a href="#" className="text-gray-700 hover:text-rose-600 transition-colors duration-300 font-medium">
               Products
             </a>
-            <a href="#" className="text-gray-700 hover:text-rose-600 transition-colors duration-300 font-medium">
-              Categories
-            </a>
+            
+            {/* Categories Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-gray-700 hover:text-rose-600 transition-colors duration-300 font-medium p-0 h-auto">
+                  Categories
+                  <ChevronDown className="w-4 h-4 ml-1" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-64 bg-white">
+                {categories.map((category) => (
+                  <DropdownMenuItem key={category.name} className="cursor-pointer p-4 hover:bg-rose-50">
+                    <div className="flex items-start gap-3 w-full">
+                      <div className="w-8 h-8 bg-gradient-to-r from-rose-100 to-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <category.icon className="w-4 h-4 text-rose-600" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-medium text-gray-900">{category.name}</div>
+                        <div className="text-sm text-gray-500">{category.description}</div>
+                        <div className="text-xs text-gray-400 mt-1">{category.products}</div>
+                      </div>
+                    </div>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             
             {/* Brands Dropdown */}
             <DropdownMenu>
@@ -149,9 +179,25 @@ const Header = () => {
               <a href="#" className="text-gray-700 hover:text-rose-600 transition-colors duration-300 font-medium px-2">
                 Products
               </a>
-              <a href="#" className="text-gray-700 hover:text-rose-600 transition-colors duration-300 font-medium px-2">
-                Categories
-              </a>
+              
+              {/* Mobile Categories Section */}
+              <div className="px-2">
+                <div className="text-gray-700 font-medium mb-2">Categories</div>
+                <div className="ml-4 space-y-3">
+                  {categories.map((category) => (
+                    <div key={category.name} className="flex items-start gap-3">
+                      <div className="w-6 h-6 bg-gradient-to-r from-rose-100 to-pink-100 rounded flex items-center justify-center flex-shrink-0">
+                        <category.icon className="w-3 h-3 text-rose-600" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-medium text-gray-900">{category.name}</div>
+                        <div className="text-xs text-gray-500">{category.description}</div>
+                        <div className="text-xs text-gray-400">{category.products}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
               
               {/* Mobile Brands Section */}
               <div className="px-2">
