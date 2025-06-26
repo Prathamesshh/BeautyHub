@@ -13,9 +13,9 @@ const ChatBot = ({ isOpen, onClose }: ChatBotProps) => {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-      <div className="fixed bottom-4 right-4 w-96 h-[600px] bg-white rounded-lg shadow-2xl overflow-hidden">
+      <div className="fixed bottom-4 right-4 w-96 h-[500px] bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col">
         {/* Header */}
-        <div className="bg-gradient-to-r from-violet-500 to-purple-500 p-4 text-white flex items-center justify-between">
+        <div className="bg-gradient-to-r from-violet-500 to-purple-500 p-4 text-white flex items-center justify-between flex-shrink-0">
           <h3 className="font-semibold">AI Beauty Assistant</h3>
           <Button
             variant="ghost"
@@ -28,14 +28,14 @@ const ChatBot = ({ isOpen, onClose }: ChatBotProps) => {
         </div>
         
         {/* Chatbot Iframe */}
-        <div className="h-full">
+        <div className="flex-1 w-full">
           <iframe
             src="https://www.chatbase.co/chatbot-iframe/7kB_J5K147FxHg9iXeYRA"
             width="100%"
             height="100%"
             frameBorder="0"
             allow="microphone"
-            className="border-0"
+            className="border-0 w-full h-full"
           />
         </div>
       </div>
