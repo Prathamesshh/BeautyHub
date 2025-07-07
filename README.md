@@ -1,76 +1,64 @@
-# Welcome to your Lovable project
+# 💄 Beauty AI Recommender — AuraBot
 
-## Project info
+Welcome to **Beauty AI Recommender** — a smart, elegant, and customer-first AI assistant built to help users find the perfect skincare, makeup, and hair care products based on their unique needs. ✨
 
-**URL**: https://lovable.dev/projects/c9954e53-aadb-4019-bde2-11dff6d2ecb7
+---
 
-## Take a Look
-**URL** = https://chic-chat-catalog.lovable.app
+## 🌐 Live Demo
 
-## How can I edit this code?
+🔗 [View the Website](https://chic-chat-catalog.lovable.app)  
+🔗 [Try the AI Chatbot](https://aura-bot-rho.vercel.app/)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 📌 Overview
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c9954e53-aadb-4019-bde2-11dff6d2ecb7) and start prompting.
+Bosar Cosmetics is a high-quality online beauty store offering a wide range of skincare, makeup, and hair care products. This project introduces an **AI-powered shopping assistant** that personalizes product recommendations based on the user's concerns, preferences, and even face images (if provided).
 
-Changes made via Lovable will be committed automatically to this repo.
+🧠 Powered by:  
+- AI chatbot trained on a **CSV/PDF database** of our live product catalog  
+- Dynamic product cards with real-time buying links  
+- Smart filtering by product need, type, and skin/hair suitability  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ✨ Key Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+✅ **Natural Conversation Flow:**  
+Follows a multi-step script to identify the customer’s skin/hair type, concerns, and desired look.
 
-Follow these steps:
+✅ **Smart Product Recommendations:**  
+Trained on structured product data (ingredients, usage, skin type suitability, etc.) for accurate suggestions.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+✅ **Product Cards with Live Buy Links:**  
+Showcases curated products from Nykaa, Amazon, Maybelline, and more with hover effects and CTA buttons.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+✅ **Responsive UI Inspired by Myntra/Nykaa:**  
+Modern, clean design with soft gradients, smooth shadows.
 
-# Step 3: Install the necessary dependencies.
-npm i
+✅ **Integrated AI Chat Assistant:**  
+Seamless chatbot integration via iframe with toggle visibility and animated transitions.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🎯 How the AI Assistant Works
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Greets the customer warmly 🤗  
+2. Identifies product category (skincare, makeup, hair care, etc.)  
+3. Asks follow-up questions: skin type, concerns, goals  
+4. Optionally requests an image for deeper analysis  
+5. Suggests personalized products (from product database)  
+6. Explains how each product helps  
+7. Offers continued support if needed  
 
-**Use GitHub Codespaces**
+🧾 **Data source:** A `.csv` or `.pdf` file structured with product name, skin/hair type, concern, ingredients, price, and link.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 💻 Tech Stack
 
-This project is built with:
+- **Frontend:** Vite, TypeScript, React, shadcn-ui, Tailwind CSS
+- **AI Layer:** [Chatbase](https://www.chatbase.co/) (trained with .csv/.pdf product list)  
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c9954e53-aadb-4019-bde2-11dff6d2ecb7) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
